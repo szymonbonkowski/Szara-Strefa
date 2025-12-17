@@ -1,0 +1,17 @@
+@use 'abstract/variables';
+@use 'abstract/mixins';
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/navbar';
+@use 'components/buttons';
+@use 'components/card';
+@use 'components/footer';
+@use 'pages/home';
+@use 'pages/faq';
+@use 'pages/about';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

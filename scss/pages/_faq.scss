@@ -1,0 +1,89 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-item {
+  background-color: $color-white;
+  border: 3px solid $color-secondary;
+  box-shadow: 5px 5px 0 $color-secondary;
+  transition: all 0.3s ease;
+
+  &[open] {
+    box-shadow: 8px 8px 0 $color-accent;
+    border-color: $color-secondary;
+
+    .faq-item__trigger {
+      background-color: $color-secondary;
+      color: $color-accent;
+      border-bottom: 3px solid $color-accent;
+    }
+
+    .faq-item__icon {
+      transform: rotate(180deg);
+      background-color: $color-accent;
+      color: $color-secondary;
+    }
+  }
+
+  &__trigger {
+    list-style: none;
+    padding: 20px;
+    font-family: $font-heading;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.3s;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:hover {
+      background-color: rgba($color-accent, 0.2);
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+
+  &__content {
+    padding: 20px;
+    line-height: 1.6;
+    border-top: 1px dashed $color-secondary;
+
+    animation: slideDown 0.3s ease-out;
+
+    strong {
+      background-color: $color-accent;
+      padding: 0 5px;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

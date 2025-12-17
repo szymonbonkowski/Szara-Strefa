@@ -1,0 +1,28 @@
+@use '../abstract/variables' as *;
+
+.btn {
+  display: inline-block;
+  background-color: $color-primary;
+  color: $color-secondary;
+  border: $border-width solid $color-secondary;
+  padding: 12px 24px;
+  font-family: $font-heading;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px $color-secondary;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-accent;
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0px $color-secondary;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}

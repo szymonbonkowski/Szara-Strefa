@@ -1,0 +1,12 @@
+@use '../abstract/variables' as *;
+
+.footer {
+  background-color: $color-secondary;
+  color: #888;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: auto;
+  border-top: 5px solid $color-accent;
+  font-family: $font-body;
+  font-size: 0.8rem;
+}
