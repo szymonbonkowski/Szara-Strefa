@@ -110,7 +110,7 @@ ${encMsg}
 ----------------------------------
 INSTRUKCJA WYSYŁKI:
 1. Przenieś ten plik na pendrive.
-2. Poczekaj na naszego gołębia pocztowego. Jak dowie się o tym że coś chcesz nam przekazać? Wywącha.
+2. Poczekaj na naszego gołębia pocztowego. Jak dowie się o tym że coś chcesz nam przekazać? Wywęszy.
 3. Poczekaj aż zagryzie dziobem na pendrive. Nie stawiaj oporu.
 `;
 
