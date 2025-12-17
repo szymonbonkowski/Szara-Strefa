@@ -230,6 +230,11 @@ h1, h2, h3 {
   gap: 30px;
   padding: 20px 0;
 }
+@media (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
 .features__item {
   background-color: #FFFFFF;
   border: 3px solid #2C2C2C;
@@ -244,6 +249,9 @@ h1, h2, h3 {
   padding: 30px;
   text-align: center;
   background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .features__item h3 {
   background-color: #2C2C2C;
@@ -252,9 +260,14 @@ h1, h2, h3 {
   padding: 5px 10px;
   margin-bottom: 15px;
   transform: rotate(1deg);
+  align-self: center;
 }
 .features__item p {
   font-size: 0.9rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faq-list {
