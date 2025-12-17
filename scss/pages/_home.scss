@@ -45,12 +45,20 @@
   gap: 30px;
   padding: 20px 0;
 
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
     @include box-look;
     padding: 30px;
     text-align: center;
     background-color: $color-white;
 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
     h3 {
       background-color: $color-secondary;
       color: $color-white;
@@ -58,10 +66,15 @@
       padding: 5px 10px;
       margin-bottom: 15px;
       transform: rotate(1deg);
+      align-self: center;
     }
 
     p {
       font-size: 0.9rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
