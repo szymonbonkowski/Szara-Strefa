@@ -38,7 +38,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: background 0.3s;
 
     &::-webkit-details-marker {
@@ -60,6 +60,7 @@
     border-radius: 50%;
     margin-right: 15px;
     font-weight: bold;
+    flex-shrink: 0;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 
