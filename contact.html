@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szara Strefa - Szyfr</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+    <div class="nav__container">
+        <a href="index.html" class="nav__logo">📦 SZARA STREFA</a>
+        <ul class="nav__menu">
+            <li><a href="index.html" class="nav__link">Baza</a></li>
+            <li><a href="offers.html" class="nav__link">Magazyn</a></li>
+            <li><a href="about.html" class="nav__link">Układ</a></li>
+            <li><a href="faq.html" class="nav__link">Alibi</a></li>
+            <li><a href="contact.html" class="nav__link nav__link--active">Szyfr</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <h1>NADAJ WIADOMOŚĆ</h1>
+    <p>Wiadomość zostanie zaszyfrowana lokalnie i przygotowana do przerzutu.</p>
+
+    <form style="background: white; border: 3px solid #2C2C2C; padding: 30px; box-shadow: 10px 10px 0 #2C2C2C; max-width: 600px;">
+        <label style="font-weight: bold; display: block; margin-bottom: 5px;">TWÓJ PSEUDONIM:</label>
+        <input type="text" id="agent-name" style="width: 100%; padding: 10px; border: 2px solid #2C2C2C; margin-bottom: 20px; font-family: monospace;">
+
+        <label style="font-weight: bold; display: block; margin-bottom: 5px;">TREŚĆ GRYPSU:</label>
+        <textarea id="agent-msg" rows="5" style="width: 100%; padding: 10px; border: 2px solid #2C2C2C; margin-bottom: 20px; font-family: monospace;"></textarea>
+
+        <button type="button" id="submit-btn" class="btn" onclick="generateDeadDrop()">SZYFRUJ I POBIERZ</button>
+    </form>
+</main>
+
+<footer class="footer">
+    <p>&copy; Szara Strefa. Handel tekturą, (chyba) legalny.</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

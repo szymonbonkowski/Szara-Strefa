@@ -1,0 +1,80 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-image: radial-gradient($color-secondary 1px, transparent 1px);
+  background-size: 20px 20px;
+  border-bottom: 5px dashed $color-secondary;
+  margin-bottom: 40px;
+
+  &__title {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    line-height: 1;
+    text-shadow: 6px 6px 0px $color-accent;
+
+    @include responsive(mobile) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    background-color: $color-accent;
+    color: $color-secondary;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: 3px solid $color-secondary;
+    transform: rotate(-2deg);
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+
+    @include responsive(mobile) {
+      font-size: 1.1rem;
+      transform: rotate(0);
+    }
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    @include box-look;
+    padding: 30px;
+    text-align: center;
+    background-color: $color-white;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    h3 {
+      background-color: $color-secondary;
+      color: $color-white;
+      display: inline-block;
+      padding: 5px 10px;
+      margin-bottom: 15px;
+      transform: rotate(1deg);
+      align-self: center;
+    }
+
+    p {
+      font-size: 0.9rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
